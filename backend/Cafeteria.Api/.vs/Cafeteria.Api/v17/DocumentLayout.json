@@ -1,0 +1,415 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\controllers\\depositscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\controllers\\depositscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\controllers\\menuitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\controllers\\menuitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\controllers\\restaurantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\controllers\\restaurantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\services\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\services\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\services\\depositservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\services\\depositservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\services\\idepositservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\services\\idepositservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\dtos\\orderdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\dtos\\orderdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\dtos\\depositdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\dtos\\depositdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\models\\deposit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\models\\deposit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\models\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\models\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\models\\restaurant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\models\\restaurant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|c:\\users\\lenovo\\source\\repos\\cafeteria.api\\cafeteria.api\\cafeteria.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CFE70823-4F8E-4948-8732-ACB6DBD8E932}|Cafeteria.Api\\Cafeteria.Api.csproj|solutionrelative:cafeteria.api\\cafeteria.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RestaurantsController.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Controllers\\RestaurantsController.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Controllers\\RestaurantsController.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Controllers\\RestaurantsController.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Controllers\\RestaurantsController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:46:33.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MenuItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Controllers\\MenuItemsController.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Controllers\\MenuItemsController.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Controllers\\MenuItemsController.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Controllers\\MenuItemsController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:47:34.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DepositsController.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Controllers\\DepositsController.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Controllers\\DepositsController.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Controllers\\DepositsController.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Controllers\\DepositsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:48:21.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:49:12.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:49:58.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmployeesController.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Controllers\\EmployeesController.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Controllers\\EmployeesController.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Controllers\\EmployeesController.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Controllers\\EmployeesController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:45:47.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Services\\OrderService.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Services\\OrderService.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Services\\OrderService.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAswFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:44:40.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IOrderService.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Services\\IOrderService.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Services\\IOrderService.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Services\\IOrderService.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Services\\IOrderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:43:50.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DepositService.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Services\\DepositService.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Services\\DepositService.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Services\\DepositService.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Services\\DepositService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:43:06.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IDepositService.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Services\\IDepositService.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Services\\IDepositService.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Services\\IDepositService.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Services\\IDepositService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:42:13.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "OrderDtos.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Dtos\\OrderDtos.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Dtos\\OrderDtos.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Dtos\\OrderDtos.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Dtos\\OrderDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:40:19.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DepositDtos.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Dtos\\DepositDtos.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Dtos\\DepositDtos.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Dtos\\DepositDtos.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Dtos\\DepositDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:39:45.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Deposit.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Models\\Deposit.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Models\\Deposit.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Models\\Deposit.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Models\\Deposit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:38:32.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Models\\OrderItem.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Models\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Models\\OrderItem.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Models\\OrderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:37:42.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Models\\Order.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:37:03.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MenuItem.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Models\\MenuItem.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Models\\MenuItem.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Models\\MenuItem.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Models\\MenuItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:36:25.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Restaurant.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Models\\Restaurant.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Models\\Restaurant.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Models\\Restaurant.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Models\\Restaurant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:35:41.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Models\\Employee.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Models\\Employee.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:34:51.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Data\\SeedData.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Data\\SeedData.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Data\\SeedData.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Data\\SeedData.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAmwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:33:09.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T00:32:15.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Program.cs",
+              "RelativeToolTip": "Cafeteria.Api\\Program.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T01:15:07.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\appsettings.json",
+              "RelativeToolTip": "Cafeteria.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-02T01:12:02.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Cafeteria.Api",
+              "DocumentMoniker": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Cafeteria.Api.csproj",
+              "RelativeDocumentMoniker": "Cafeteria.Api\\Cafeteria.Api.csproj",
+              "ToolTip": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\Cafeteria.Api.csproj",
+              "RelativeToolTip": "Cafeteria.Api\\Cafeteria.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-02T00:33:14.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

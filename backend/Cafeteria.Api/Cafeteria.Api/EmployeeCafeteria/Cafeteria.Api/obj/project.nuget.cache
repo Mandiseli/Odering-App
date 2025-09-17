@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "SSUobI4qPk8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lenovo\\source\\repos\\Cafeteria.Api\\Cafeteria.Api\\EmployeeCafeteria\\Cafeteria.Api\\Cafeteria.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.7\\microsoft.aspnetcore.openapi.9.0.7.nupkg.sha512",
+    "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

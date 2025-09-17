@@ -1,0 +1,29 @@
+import { useEffect, useState } from 'react';
+import { http } from '../api/http';
+import { Order } from '../models/Order';
+
+export default function OrdersPage(){
+  const [employeeNumber, setEmployeeNumber] = useState('EMP001');
+  const [orders, setOrders] = useState<Order[]>([]);
+
+  const load = () => http.get(`/orders/employee/${employeeNumber}`).then(r=>setOrders(r.data));
+  useEffect(load, []); // initial
+
+  return (
+    <div>
+      <h1>My Orders</h1>
+      <div>
+        <label>Employee # </label>
+        <input value={employeeNumber} onChange={e=>setEmployeeNumber(e.target.value)} />
+        <button onClick={load}>Refresh</button>
+      </div>
+      <ul>
+        {orders.map(o => (
+          <li key={o.id}>
+            #{o.id} — {new Date(o.orderDate).toLocaleString()} — R {o.totalAmount.toFixed(2)} — {o.status}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
