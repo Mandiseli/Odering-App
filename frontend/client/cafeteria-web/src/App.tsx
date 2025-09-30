@@ -1,23 +1,42 @@
-import { useState } from 'react';
-import EmployeesPage from './pages/EmployeesPage';
-import RestaurantsPage from './pages/RestaurantsPage';
-import OrdersPage from './pages/OrdersPage';
-import AdminOrdersPage from './pages/AdminOrdersPage';
+import React, { useState } from 'react'
+import EmployeesPage from './components/EmployeesPage'
+import DepositPage from './components/DepositPage'
+import RestaurantsPage from './components/RestaurantsPage'
+import OrdersPage from './components/OrdersPage'
+import AdminPage from './components/AdminPage'
+import './styles/index.css'
 
-export default function App(){
-  const [tab, setTab] = useState<'emp'|'rest'|'orders'|'admin'>('emp');
+export default function App() {
+  const [view, setView] = useState<'employees'|'deposit'|'restaurants'|'orders'|'admin'>('employees')
+
   return (
-    <div style={{padding:16}}>
-      <nav style={{display:'flex', gap:8, marginBottom:16}}>
-        <button onClick={()=>setTab('emp')}>Employees</button>
-        <button onClick={()=>setTab('rest')}>Order Food</button>
-        <button onClick={()=>setTab('orders')}>My Orders</button>
-        <button onClick={()=>setTab('admin')}>Admin</button>
+    <div className="container">
+      <header className="header">
+        <div>
+          <h1 className="app-title">🍽 Employee Cafeteria — Credit & Ordering</h1>
+          <p className="subtitle">Demo app — deposit, order, and manage cafeteria credits</p>
+        </div>
+      </header>
+
+      <nav className="nav">
+        <button className="btn" onClick={() => setView('employees')}>Employees</button>
+        <button className="btn" onClick={() => setView('deposit')}>Deposit</button>
+        <button className="btn" onClick={() => setView('restaurants')}>Order Food</button>
+        <button className="btn" onClick={() => setView('orders')}>My Orders</button>
+        <button className="btn" onClick={() => setView('admin')}>Admin</button>
       </nav>
-      {tab==='emp' && <EmployeesPage />}
-      {tab==='rest' && <RestaurantsPage />}
-      {tab==='orders' && <OrdersPage />}
-      {tab==='admin' && <AdminOrdersPage />}
+
+      <main>
+        {view === 'employees' && <EmployeesPage />}
+        {view === 'deposit' && <DepositPage />}
+        {view === 'restaurants' && <RestaurantsPage />}
+        {view === 'orders' && <OrdersPage />}
+        {view === 'admin' && <AdminPage />}
+      </main>
+
+      <footer className="footer">
+        <small>Built with ❤️ • Demo</small>
+      </footer>
     </div>
-  );
+  )
 }

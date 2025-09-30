@@ -1,5 +1,6 @@
-import axios from 'axios';
+import axios from 'axios'
 
 export const http = axios.create({
-  baseURL: 'https://localhost:5001/api'
-});
+  baseURL: '/api', // Proxy via Vite -> https://localhost:5001
+  headers: { 'Content-Type': 'application/json' }
+})
