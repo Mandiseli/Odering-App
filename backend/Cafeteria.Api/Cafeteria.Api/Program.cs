@@ -5,26 +5,25 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add services
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// EF Core + MySQL
-var cs = builder.Configuration.GetConnectionString("DefaultConnection")!;
-builder.Services.AddDbContext<ApplicationDbContext>(opt =>
-    opt.UseMySql(cs, ServerVersion.AutoDetect(cs)));
+// Database
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseMySql(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        new MySqlServerVersion(new Version(8, 0, 36))
+    ));
 
-// DI
+// Dependency injection
 builder.Services.AddScoped<IDepositService, DepositService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
 
-// CORS for React dev server
-builder.Services.AddCors(o => o.AddPolicy("client",
-    p => p.AllowAnyHeader().AllowAnyMethod()
-          .WithOrigins("http://localhost:5173", "https://localhost:5173")));
-
 var app = builder.Build();
 
+// Middleware
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -32,15 +31,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseCors("client");
-app.MapControllers();
 
-// Auto-migrate & seed dev data
-using (var scope = app.Services.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    db.Database.Migrate();
-    SeedData.EnsureSeeded(db);
-}
+app.UseAuthorization();
+
+app.MapControllers();
 
 app.Run();

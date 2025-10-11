@@ -1,43 +1,34 @@
 ﻿using Cafeteria.Api.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Cafeteria.Api.Data
+namespace Cafeteria.Api.Data;
+
+public class ApplicationDbContext : DbContext
 {
-    public class ApplicationDbContext : DbContext
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+
+    public DbSet<Employee> Employees => Set<Employee>();
+    public DbSet<Restaurant> Restaurants => Set<Restaurant>();
+    public DbSet<MenuItem> MenuItems => Set<MenuItem>();
+    public DbSet<Order> Orders => Set<Order>();
+    public DbSet<OrderItem> OrderItems => Set<OrderItem>();
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options) { }
+        base.OnModelCreating(modelBuilder);
 
-        public DbSet<Employee> Employees => Set<Employee>();
-        public DbSet<Restaurant> Restaurants => Set<Restaurant>();
-        public DbSet<MenuItem> MenuItems => Set<MenuItem>();
-        public DbSet<Order> Orders => Set<Order>();
-        public DbSet<OrderItem> OrderItems => Set<OrderItem>();
-        public DbSet<Deposit> Deposits => Set<Deposit>();
+        modelBuilder.Entity<Employee>()
+            .HasIndex(e => e.EmployeeNumber)
+            .IsUnique();
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
+        modelBuilder.Entity<Restaurant>()
+            .HasMany(r => r.MenuItems)
+            .WithOne(m => m.Restaurant!)
+            .HasForeignKey(m => m.RestaurantId);
 
-            modelBuilder.Entity<Employee>()
-                .HasIndex(e => e.EmployeeNumber)
-                .IsUnique();
-
-            modelBuilder.Entity<Restaurant>()
-                .HasMany(r => r.MenuItems)
-                .WithOne(mi => mi.Restaurant!)
-                .HasForeignKey(mi => mi.RestaurantId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            modelBuilder.Entity<Order>()
-                .HasOne(o => o.Employee)
-                .WithMany(e => e.Orders)
-                .HasForeignKey(o => o.EmployeeId);
-
-            modelBuilder.Entity<OrderItem>()
-                .HasOne(oi => oi.Order)
-                .WithMany(o => o.Items)
-                .HasForeignKey(oi => oi.OrderId);
-        }
+        modelBuilder.Entity<Order>()
+            .HasMany(o => o.Items)
+            .WithOne(i => i.Order!)
+            .HasForeignKey(i => i.OrderId);
     }
 }

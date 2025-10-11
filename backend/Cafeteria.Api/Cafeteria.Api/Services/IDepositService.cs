@@ -1,9 +1,8 @@
-﻿using Cafeteria.Api.Dtos;
+﻿using Cafeteria.Api.Models;
 
-namespace Cafeteria.Api.Services
+namespace Cafeteria.Api.Services;
+
+public interface IDepositService
 {
-    public interface IDepositService
-    {
-        Task<DepositResponse> DepositAsync(string employeeNumber, decimal amount);
-    }
+    Task<Employee?> MakeDepositAsync(string employeeNumber, decimal amount);
 }

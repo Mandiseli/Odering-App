@@ -1,13 +1,11 @@
-﻿using Cafeteria.Api.Dtos;
-using Cafeteria.Api.Models;
+﻿using Cafeteria.Api.Models;
 
-namespace Cafeteria.Api.Services
+namespace Cafeteria.Api.Services;
+
+public interface IOrderService
 {
-    public interface IOrderService
-    {
-        Task<Order> PlaceOrderAsync(string employeeNumber, List<OrderItemRequest> items);
-        Task<List<Order>> GetOrdersForEmployeeAsync(string employeeNumber);
-        Task<List<Order>> GetAllPendingAsync();
-        Task<Order> UpdateStatusAsync(int orderId, OrderStatus status);
-    }
+    Task<Order?> PlaceOrderAsync(string employeeNumber, Dictionary<int, int> items);
+    Task<List<Order>> GetOrdersForEmployeeAsync(string employeeNumber);
+    Task<List<Order>> GetAllOrdersAsync();
+    Task<Order?> UpdateOrderStatusAsync(int orderId, string status);
 }

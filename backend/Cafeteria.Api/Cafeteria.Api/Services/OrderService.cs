@@ -1,85 +1,79 @@
 ﻿using Cafeteria.Api.Data;
-using Cafeteria.Api.Dtos;
 using Cafeteria.Api.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Cafeteria.Api.Services
+namespace Cafeteria.Api.Services;
+
+public class OrderService : IOrderService
 {
-    public class OrderService : IOrderService
+    private readonly ApplicationDbContext _context;
+
+    public OrderService(ApplicationDbContext context)
     {
-        private readonly ApplicationDbContext _db;
-        public OrderService(ApplicationDbContext db) => _db = db;
+        _context = context;
+    }
 
-        public async Task<Order> PlaceOrderAsync(string employeeNumber, List<OrderItemRequest> items)
+    public async Task<Order?> PlaceOrderAsync(string employeeNumber, Dictionary<int, int> items)
+    {
+        var employee = await _context.Employees.FirstOrDefaultAsync(e => e.EmployeeNumber == employeeNumber);
+        if (employee == null) return null;
+
+        var menuItems = await _context.MenuItems.Where(m => items.Keys.Contains(m.Id)).ToListAsync();
+        if (!menuItems.Any()) return null;
+
+        decimal total = 0;
+        var order = new Order { EmployeeId = employee.Id };
+
+        foreach (var menuItem in menuItems)
         {
-            if (items is null || items.Count == 0) throw new ArgumentException("No items in order.");
+            int qty = items[menuItem.Id];
+            decimal lineTotal = qty * menuItem.Price;
+            total += lineTotal;
 
-            var emp = await _db.Employees.SingleOrDefaultAsync(e => e.EmployeeNumber == employeeNumber)
-                ?? throw new InvalidOperationException("Employee not found.");
-
-            var ids = items.Select(i => i.MenuItemId).ToList();
-            var menu = await _db.MenuItems.Where(m => ids.Contains(m.Id)).ToDictionaryAsync(m => m.Id);
-
-            decimal total = 0m;
-            var orderItems = new List<OrderItem>();
-
-            foreach (var req in items)
+            order.Items.Add(new OrderItem
             {
-                if (!menu.TryGetValue(req.MenuItemId, out var mi))
-                    throw new InvalidOperationException($"Menu item {req.MenuItemId} not found.");
-                if (req.Quantity <= 0) throw new ArgumentException("Quantity must be positive.");
-
-                total += mi.Price * req.Quantity;
-                orderItems.Add(new OrderItem
-                {
-                    MenuItemId = req.MenuItemId,
-                    Quantity = req.Quantity,
-                    UnitPriceAtTimeOfOrder = mi.Price
-                });
-            }
-
-            if (emp.Balance < total)
-                throw new InvalidOperationException("Insufficient balance.");
-
-            using var tx = await _db.Database.BeginTransactionAsync();
-
-            emp.Balance -= total;
-            var order = new Order
-            {
-                EmployeeId = emp.Id,
-                OrderDate = DateTime.UtcNow,
-                TotalAmount = total,
-                Status = OrderStatus.Pending,
-                Items = orderItems
-            };
-            _db.Orders.Add(order);
-
-            await _db.SaveChangesAsync();
-            await tx.CommitAsync();
-
-            return order;
+                MenuItemId = menuItem.Id,
+                Quantity = qty,
+                UnitPriceAtTimeOfOrder = menuItem.Price
+            });
         }
 
-        public Task<List<Order>> GetOrdersForEmployeeAsync(string employeeNumber) =>
-            _db.Orders.Include(o => o.Items)
-                      .Include(o => o.Employee)
-                      .Where(o => o.Employee!.EmployeeNumber == employeeNumber)
-                      .OrderByDescending(o => o.OrderDate)
-                      .ToListAsync();
+        if (employee.Balance < total) return null;
 
-        public Task<List<Order>> GetAllPendingAsync() =>
-            _db.Orders.Include(o => o.Employee)
-                      .Where(o => o.Status != OrderStatus.Delivered)
-                      .OrderBy(o => o.OrderDate)
-                      .ToListAsync();
+        employee.Balance -= total;
+        order.TotalAmount = total;
 
-        public async Task<Order> UpdateStatusAsync(int orderId, OrderStatus status)
-        {
-            var order = await _db.Orders.FindAsync(orderId)
-                ?? throw new InvalidOperationException("Order not found.");
-            order.Status = status;
-            await _db.SaveChangesAsync();
-            return order;
-        }
+        _context.Orders.Add(order);
+        await _context.SaveChangesAsync();
+
+        return order;
+    }
+
+    public async Task<List<Order>> GetOrdersForEmployeeAsync(string employeeNumber)
+    {
+        var employee = await _context.Employees.FirstOrDefaultAsync(e => e.EmployeeNumber == employeeNumber);
+        if (employee == null) return new List<Order>();
+
+        return await _context.Orders
+            .Include(o => o.Items)
+            .ThenInclude(i => i.MenuItem)
+            .Where(o => o.EmployeeId == employee.Id)
+            .ToListAsync();
+    }
+
+    public async Task<List<Order>> GetAllOrdersAsync()
+    {
+        return await _context.Orders.Include(o => o.Employee).Include(o => o.Items).ToListAsync();
+    }
+
+    public async Task<Order?> UpdateOrderStatusAsync(int orderId, string status)
+    {
+        var order = await _context.Orders.FindAsync(orderId);
+        if (order == null) return null;
+
+        order.Status = status;
+        await _context.SaveChangesAsync();
+
+        return order;
     }
 }

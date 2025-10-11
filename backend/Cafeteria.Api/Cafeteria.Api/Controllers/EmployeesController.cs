@@ -1,53 +1,40 @@
 ﻿using Cafeteria.Api.Data;
+using Cafeteria.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Cafeteria.Api.Controllers
+namespace Cafeteria.Api.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class EmployeesController : ControllerBase
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class EmployeesController : ControllerBase
+    private readonly ApplicationDbContext _context;
+
+    public EmployeesController(ApplicationDbContext context)
     {
-        private readonly ApplicationDbContext _db;
-        public EmployeesController(ApplicationDbContext db) => _db = db;
+        _context = context;
+    }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAll() =>
-            Ok(await _db.Employees.AsNoTracking().ToListAsync());
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<Employee>>> GetEmployees()
+    {
+        return await _context.Employees.ToListAsync();
+    }
 
-        [HttpGet("{id:int}")]
-        public async Task<IActionResult> Get(int id)
-        {
-            var emp = await _db.Employees.FindAsync(id);
-            if (emp == null) return NotFound();
-            return Ok(emp);
-        }
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Employee>> GetEmployee(int id)
+    {
+        var employee = await _context.Employees.FindAsync(id);
+        if (employee == null) return NotFound();
+        return employee;
+    }
 
-        [HttpPost]
-        public async Task<IActionResult> Create([FromBody] Models.Employee emp)
-        {
-            _db.Employees.Add(emp);
-            await _db.SaveChangesAsync();
-            return CreatedAtAction(nameof(Get), new { id = emp.Id }, emp);
-        }
-
-        [HttpPut("{id:int}")]
-        public async Task<IActionResult> Update(int id, [FromBody] Models.Employee emp)
-        {
-            if (id != emp.Id) return BadRequest();
-            _db.Entry(emp).State = EntityState.Modified;
-            await _db.SaveChangesAsync();
-            return NoContent();
-        }
-
-        [HttpDelete("{id:int}")]
-        public async Task<IActionResult> Delete(int id)
-        {
-            var emp = await _db.Employees.FindAsync(id);
-            if (emp == null) return NotFound();
-            _db.Employees.Remove(emp);
-            await _db.SaveChangesAsync();
-            return NoContent();
-        }
+    [HttpPost]
+    public async Task<ActionResult<Employee>> PostEmployee(Employee employee)
+    {
+        _context.Employees.Add(employee);
+        await _context.SaveChangesAsync();
+        return CreatedAtAction(nameof(GetEmployee), new { id = employee.Id }, employee);
     }
 }

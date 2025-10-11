@@ -1,23 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿namespace Cafeteria.Api.Models;
 
-namespace Cafeteria.Api.Models
+public class Order
 {
-    public enum OrderStatus { Pending, Preparing, Delivering, Delivered }
+    public int Id { get; set; }
+    public int EmployeeId { get; set; }
+    public DateTime OrderDate { get; set; } = DateTime.UtcNow;
+    public decimal TotalAmount { get; set; }
+    public string Status { get; set; } = "Pending";
 
-    public class Order
-    {
-        public int Id { get; set; }
-
-        public int EmployeeId { get; set; }
-        public Employee? Employee { get; set; }
-
-        public DateTime OrderDate { get; set; } = DateTime.UtcNow;
-
-        [Column(TypeName = "decimal(18,2)")]
-        public decimal TotalAmount { get; set; }
-
-        public OrderStatus Status { get; set; } = OrderStatus.Pending;
-
-        public ICollection<OrderItem> Items { get; set; } = new List<OrderItem>();
-    }
+    public Employee? Employee { get; set; }
+    public ICollection<OrderItem> Items { get; set; } = new List<OrderItem>();
 }

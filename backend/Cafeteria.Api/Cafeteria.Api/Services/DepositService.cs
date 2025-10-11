@@ -1,57 +1,41 @@
 ﻿using Cafeteria.Api.Data;
-using Cafeteria.Api.Dtos;
+using Cafeteria.Api.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Cafeteria.Api.Services
+namespace Cafeteria.Api.Services;
+
+public class DepositService : IDepositService
 {
-    public class DepositService : IDepositService
+    private readonly ApplicationDbContext _context;
+
+    public DepositService(ApplicationDbContext context)
     {
-        private readonly ApplicationDbContext _db;
-        private const decimal Threshold = 250m;
-        private const decimal BonusPerThreshold = 500m;
+        _context = context;
+    }
 
-        public DepositService(ApplicationDbContext db) => _db = db;
+    public async Task<Employee?> MakeDepositAsync(string employeeNumber, decimal amount)
+    {
+        if (amount <= 0) return null;
 
-        public async Task<DepositResponse> DepositAsync(string employeeNumber, decimal amount)
+        var employee = await _context.Employees.FirstOrDefaultAsync(e => e.EmployeeNumber == employeeNumber);
+        if (employee == null) return null;
+
+        var now = DateTime.UtcNow;
+        var monthKey = new DateTime(now.Year, now.Month, 1);
+
+        decimal bonus = 0;
+        if (employee.LastDepositMonth != monthKey)
         {
-            if (amount <= 0) throw new ArgumentException("Deposit amount must be positive.");
-
-            var emp = await _db.Employees.SingleOrDefaultAsync(e => e.EmployeeNumber == employeeNumber)
-                ?? throw new InvalidOperationException("Employee not found.");
-
-            var now = DateTime.UtcNow;
-            var currentMonth = new DateTime(now.Year, now.Month, 1);
-
-            if (emp.LastDepositMonth == null ||
-                emp.LastDepositMonth.Value.Year != now.Year ||
-                emp.LastDepositMonth.Value.Month != now.Month)
-            {
-                emp.LastDepositMonth = currentMonth;
-                emp.MonthlyDepositTotal = 0m;
-            }
-
-            var prev = emp.MonthlyDepositTotal;
-            emp.MonthlyDepositTotal += amount;
-
-            // steps gained this deposit only
-            var prevSteps = (int)Math.Floor(prev / Threshold);
-            var newSteps = (int)Math.Floor(emp.MonthlyDepositTotal / Threshold);
-            var stepsGained = Math.Max(0, newSteps - prevSteps);
-            var bonus = stepsGained * BonusPerThreshold;
-
-            emp.Balance += amount + bonus;
-
-            _db.Deposits.Add(new Models.Deposit
-            {
-                EmployeeId = emp.Id,
-                Amount = amount,
-                BonusApplied = bonus,
-                CreatedAt = now
-            });
-
-            await _db.SaveChangesAsync();
-
-            return new DepositResponse(emp.Id, amount, bonus, emp.Balance);
+            employee.LastDepositMonth = monthKey;
         }
+
+        // Calculate bonuses
+        int eligibleBonuses = (int)(amount / 250);
+        bonus = eligibleBonuses * 500;
+
+        employee.Balance += amount + bonus;
+
+        await _context.SaveChangesAsync();
+        return employee;
     }
 }
