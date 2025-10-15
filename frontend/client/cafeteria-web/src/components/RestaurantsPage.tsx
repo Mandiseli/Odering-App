@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { http } from '../api/http'
 import { Restaurant } from '../types'
-import MenuView from './MenuView'
+import MenuView from './components./MenuView'
 
 export default function RestaurantsPage(){
   const [restaurants, setRestaurants] = useState<Restaurant[]>([])
